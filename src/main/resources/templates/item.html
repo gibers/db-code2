@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Contacts</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+
+<body>
+
+<ul th:each="item : ${item}">
+    <li>
+        <span th:text="${item.iditem}">toto</span>
+        <span th:text="${item.name}">XXXXXXX</span>
+        <span th:text="${item.contact_idcont}">YYYYYYYY</span>
+    </li>
+</ul>
+
+</body>
+</html>

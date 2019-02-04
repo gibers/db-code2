@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Spring Boot Contacts</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+  </head>
+
+  <body>
+    <h2>Spring Boot Contacts</h2>
+    <form th:action="@{/submit}"  method="POST">
+      <label for="firstname">First Name:</label>
+        <input type="text"  name="firstname"></input><br/>
+      <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname"></input><br/>
+      <label for="phonenumber">Phone #:</label>
+        <input type="text" name="phonenumber"></input><br/>
+      <label for="emailaddress">Email:</label>
+        <input type="text" name="emailaddress"></input><br/>
+        <input type="submit"></input>
+    </form>
+
+    <ul th:each="contact : ${contacts}">
+      <li>
+        <span th:text="${contact.idcont}">First</span>
+        <span th:text="${contact.firstname}">First</span>
+        <span th:text="${contact.lastname}">Last</span> :
+        <span th:text="${contact.phonenumber}">phoneNumber</span>,
+        <span th:text="${contact.emailaddress}">emailAddress</span>
+      </li>
+    </ul>
+
+  </body>
+</html>

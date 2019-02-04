@@ -1,0 +1,39 @@
+
+
+---------------------------------------------------
+
+@SpringBootApplication enables many defaults. It is a convenience annotation that adds
+@Configuration, @EnableAutoConfiguration, @EnableWebMvc, @ComponentScan
+
+---------------------------------------------------
+
+Note that, since the application.properties and application.yml files accept Spring style placeholders (${…​}),
+the Maven filtering is changed to use @..@ placeholders.
+(You can override that by setting a Maven property called resource.delimiter.)
+
+---------------------------------------------------
+
+
+à voir :
+spring-boot-starter-data-rest
+spring-boot-starter-json
+
+spring-boot-starter-logging
+
+@EqualsAndHashCode(exclude = {"id"}) // sur une Entity
+
+---------------------------------------------------
+
+exclure une conf :
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
+spring.autoconfigure.exclude
+
+---------------------------------------------------
+
+https://start.spring.io/
+
+---------------------------------------------------
+
+5332AFCD19BDDE7D02823A61992593EB
+
